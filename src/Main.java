@@ -30,7 +30,7 @@ public class Main {
         }
         System.out.println("So player " + whoplays1st.get(1).getName() + " plays 1st");
         while(true){
-            System.out.println(whoplays1st.get(totalMoves%2).getName() + " to place your card enter x and y co-ordinates each entry followed by pressing enter.\nFor example to place card in 1st box type 1 then \'Enter\' then again 1 and then \'Enter\'");
+            System.out.println(whoplays1st.get(totalMoves%2).getName() + " to place your card enter x and y co-ordinates each entry followed by pressing enter.\nFor example to place card in 1st box type 1 then 'Enter' then again 1 and then 'Enter'");
             x = cin.nextInt();
             y = cin.nextInt();
             if(play.placeTheCard(whoplays1st.get(totalMoves%2),x - 1,y - 1)){
@@ -41,7 +41,7 @@ public class Main {
             }
             if(totalMoves > 4){
                 if(play.checkIfWin()){
-                    System.out.println( whoplays1st.get(totalMoves%2).getName() + " - Wins!!!");
+                    System.out.println( whoplays1st.get(totalMoves%2).getName() + " - Wins in " + whoplays1st.get(totalMoves%2).getMovesCount() + " moves!!!");
                     break;
                 }else if(totalMoves == 9){
                     System.out.println("Well played Guys.... Sadly it's a draw!!");

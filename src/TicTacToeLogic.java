@@ -11,8 +11,8 @@ public class TicTacToeLogic implements TicTacToeBoard {
     public boolean placeTheCard(Player player, int x, int y) {
         boolean returnValue = isPlaceable(x, y);
         if (returnValue) {
-            if(player.getPlayerValue() == 'x') board[x][y] = true;
-            else board[x][y] = false;
+            board[x][y] = player.getPlayerValue() == 'x';
+            player.incrementMovesCount();
         }
         return returnValue;
     }
